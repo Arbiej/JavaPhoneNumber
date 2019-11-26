@@ -1,0 +1,8 @@
+package pl.phone.test;
+
+public class MainApp {
+    public static void main(String[] args) {
+    //    PhoneNumber phoneNumber =new PhoneNumber("+6743908590438!");
+        System.out.println(PhoneNumber.createOrThrow("+6743908590438!").valueWithoutSpecialCharacters());
+    }
+}
