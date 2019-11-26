@@ -1,0 +1,22 @@
+package pl.phone.test;
+
+public class PhoneNumber {
+
+    private final String unparsed ;
+
+    public PhoneNumber(String unparsed) {
+
+        validate(unparsed);
+
+        this.unparsed = unparsed;
+    }
+    private void validate(String unparsed){
+        if (unparsed == null || unparsed.isEmpty() ){
+            throw new IllegalArgumentException("Phone number cannot be null or empty");
+        }
+
+    }
+    String valueWithoutSpecialCharacters(){
+        return unparsed.replaceAll("[^0-9]" , "");
+    }
+}
